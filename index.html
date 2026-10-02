@@ -296,7 +296,8 @@
 <option value="bKash">📱 bKash</option>
 <option value="Nagad">📱 Nagad</option>
 <option value="Rocket">📱 Rocket</option>
-    </select>
+    </select><div id="paymentInfo" class="notice" style="display:none; margin-top:12px;">
+    </div>
 
     <label>🧾 Transaction ID</label>
 
@@ -365,7 +366,19 @@
       "\n\nআপনার Order যাচাই করা হবে।"
     );
   }
+document.getElementById("payment").addEventListener("change", function () {
+  const info = document.getElementById("paymentInfo");
 
+  if (this.value === "bKash") {
+    info.style.display = "block";
+    info.innerHTML =
+      "📱 bKash Number: <strong>01309267610</strong><br>" +
+      "💰 এই নম্বরে টাকা পাঠান।";
+  } else {
+    info.style.display = "none";
+    info.innerHTML = "";
+  }
+});
 </script>
 
 </body>
