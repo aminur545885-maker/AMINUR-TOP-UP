@@ -1284,82 +1284,90 @@ b.innerHTML="";
 
 function submitOrder(){
 
-let uid=
-document.getElementById("uid")
-.value.trim();
+  let uid =
+    document.getElementById("uid")
+    .value.trim();
 
-let payment=
-document.getElementById("payment")
-.value;
+  let payment =
+    document.getElementById("payment")
+    .value;
 
-let trx=
-document.getElementById("trx")
-.value.trim();
+  let trx =
+    document.getElementById("trx")
+    .value.trim();
 
+  if(!uid){
+    alert("⚠️ Player UID দিন!");
+    return;
+  }
 
-if(!uid){
+  if(!selected){
+    alert("💎 একটি Package নির্বাচন করুন!");
+    return;
+  }
 
-alert("⚠️ Player UID দিন!");
+  if(!payment){
+    alert("💳 Payment Method নির্বাচন করুন!");
+    return;
+  }
 
-return;
-}
+  if(!trx){
+    alert("🧾 Transaction ID দিন!");
+    return;
+  }
 
-if(!selected){
+  let orderId =
+    "ATU-" +
+    Date.now()
+    .toString()
+    .slice(-8);
 
-alert("💎 একটি Package নির্বাচন করুন!");
+  let orderData = {
+    orderId: orderId,
+    uid: uid,
+    package: selected.name,
+    price: selected.price,
+    payment: payment,
+    trx: trx,
+    time: new Date().toISOString()
+  };
 
-return;
-}
+  localStorage.setItem(
+    "lastOrder",
+    JSON.stringify({
+      orderId: orderId,
+      uid: uid,
+      package: selected.name,
+      price: selected.price,
+      payment: payment,
+      trx: trx,
+      createdAt: new Date().toISOString()
+    })
+  );
 
-if(!payment){
+  /* ================================
+     SEND ORDER TO GOOGLE APPS SCRIPT
+     ================================ */
 
-alert("💳 Payment Method নির্বাচন করুন!");
+  fetch(
+    "https://script.google.com/macros/s/AKfycbxbCYGYfYtuQY2HLpJAOsds1-v4TqKOBvtwZEkHWOlMQLdlZILzHnlE6hbfw2S1nmVN9Q/exec",
+    {
+      method: "POST",
+      body: JSON.stringify(orderData)
+    }
+  )
+  .then(() => {
+    console.log("Order sent successfully");
+  })
+  .catch((error) => {
+    console.error("Order sending error:", error);
+  });
 
-return;
-}
+  document.getElementById("orderid")
+    .textContent =
+    "Order ID: " + orderId;
 
-if(!trx){
+  document.getElementById("modal")
+    .classList.add("show");
 
-alert("🧾 Transaction ID দিন!");
-
-return;
-}
-
-
-let orderId=
-"ATU-"+
-Date.now()
-.toString()
-.slice(-8);
-
-
-localStorage.setItem(
-"lastOrder",
-JSON.stringify({
-
-orderId:orderId,
-uid:uid,
-package:selected.name,
-price:selected.price,
-payment:payment,
-trx:trx,
-createdAt:new Date().toISOString()
-
-})
-);
-
-
-document.getElementById("orderid")
-.textContent=
-"Order ID: "+orderId;
-
-
-document.getElementById("modal")
-.classList.add("show");
-
-}
-
-</script>
-
-</body>
- </html>
+ }
