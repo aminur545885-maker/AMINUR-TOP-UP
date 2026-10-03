@@ -1373,7 +1373,10 @@ function showPaymentInfo(v){
   }else{
     box.innerHTML = "";
   }
-  }
+  }document.getElementById("payment").addEventListener("change", function(){
+  showPaymentInfo(this.value);
+});
+showPaymentInfo(document.getElementById("payment").value);
  </script>
 </body>
 </html>
