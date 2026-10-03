@@ -1416,18 +1416,24 @@ function submitOrder(){
      ================================ */
 
   fetch(
-  "https://script.google.com/macros/s/AKfycbzoU2GzMjS1jgMdzEmzUZmaX9qUR7EGOG6MC7d_mh32JfX3_3hxvcZ4oyCdLpRFFw9Rag/exec",
-    {
-      method: "POST",
-      body: JSON.stringify(orderData)
-    }
-  )
-  .then(() => {
-    console.log("Order sent successfully");
-  })
-  .catch((error) => {
-    console.error("Order sending error:", error);
-  });
+  "https://script.google.com/macros/s/AKfycbw2JPhikmqNds14mDOhTohaSa0DzA3S2rfjgBWLQqVhxgfg888xOBRyO9WD1j1I46b6/exec",
+  {
+    method: "POST",
+    body: new URLSearchParams({
+      orderId: orderId,
+      uid: uid,
+      package: selected.name,
+      paymentMethod: payment,
+      transactionId: trx
+    })
+  }
+)
+.then(() => {
+  console.log("Order sent successfully");
+})
+.catch((error) => {
+  console.error("Order sending error:", error);
+});
 
   document.getElementById("orderid")
     .textContent =
