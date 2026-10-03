@@ -2,97 +2,1364 @@
 <html lang="bn">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="theme-color" content="#ffffff">
-<title>AMINUR TOP-UP | Free Fire</title>
+
+<title>AMINUR TOP-UP | Free Fire Diamond</title>
+
 <style>
-:root{--yellow:#ffc400;--blue:#087cf5;--cyan:#08b7ef;--bg:#f5f6f8;--line:#e3e6eb}
-*{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth}
-body{font-family:Arial,"Noto Sans Bengali",sans-serif;background:var(--bg);color:#17202d;padding-bottom:80px}
-button,input,select{font:inherit}button{cursor:pointer}.container{width:min(720px,100%);margin:auto;padding:0 14px}
-.topbar{position:sticky;top:0;z-index:50;background:#fff;border-bottom:1px solid var(--line)}
-.top-inner{height:62px;display:flex;align-items:center;justify-content:space-between}
-.logo{font-size:21px;font-weight:900}.logo span{color:#08aef0}
-.menu{border:1px solid var(--line);background:#fff;border-radius:11px;width:40px;height:40px;font-size:19px}
-.hero{padding:14px 0 8px}.banner{min-height:165px;border-radius:16px;padding:23px;color:#fff;overflow:hidden;position:relative;background:linear-gradient(125deg,#18004e,#7000a8 52%,#0078d8);box-shadow:0 8px 25px #0002}
-.banner:after{content:"💎";position:absolute;right:15px;bottom:-18px;font-size:110px;opacity:.2}
-.banner small{color:#9ff7ff;font-weight:900}.banner h1{font-size:32px;line-height:1.05;margin:8px 0}.banner p{font-size:12px;line-height:1.5;max-width:285px;color:#e0efff}
-.banner button{margin-top:12px;border:0;border-radius:9px;padding:9px 13px;background:#ffd000;font-weight:900}
-.title{margin:24px 6px 14px;background:#fff;border-left:5px solid var(--yellow);border-radius:10px;padding:13px 14px;font-size:21px;font-weight:900}
-.cats{display:grid;grid-template-columns:repeat(4,1fr);gap:9px}.cat{background:#fff;border:1px solid var(--line);border-radius:13px;padding:11px 4px;text-align:center;font-size:11px;font-weight:800}.cat b{display:block;font-size:24px;margin-bottom:4px}
-.products{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}.product{background:#fff;border:1px solid var(--line);border-radius:15px;overflow:hidden;box-shadow:0 5px 16px #0f172a0d}
-.pic{height:140px;display:flex;align-items:center;justify-content:center;position:relative;background:linear-gradient(135deg,#21004f,#7800b8 55%,#087cf5)}.pic:after{content:"";position:absolute;width:145px;height:145px;border-radius:50%;background:#fff2;right:-50px;top:-50px}.diamond{font-size:64px;filter:drop-shadow(0 7px 6px #0006)}.pic .word{position:absolute;left:10px;top:9px;color:#fff;font-weight:1000;font-size:17px;line-height:1.05;z-index:2;text-shadow:2px 2px #450070}
-.body{padding:11px}.body h3{font-size:13px;min-height:35px;line-height:1.35}.price{color:#078fd7;font-size:17px;font-weight:1000;margin:5px 0 9px}.buy{width:100%;border:0;border-radius:9px;padding:10px;background:#111827;color:#fff;font-size:12px;font-weight:900}
-.order{background:#fff;border:1px solid var(--line);border-radius:16px;padding:16px;box-shadow:0 5px 18px #0f172a0d}
-label{display:block;font-size:13px;font-weight:900;margin:13px 0 7px}input,select{width:100%;padding:13px;border:1px solid #d6dbe2;border-radius:10px;background:#fafbfc;outline:0}.selected{padding:13px;border-radius:10px;background:#effaff;border:1px solid #9de9ff;color:#087eaf;font-weight:900;font-size:13px}
-.pay{margin-top:10px;padding:12px;border-radius:10px;background:#fff8df;border:1px solid #efd267;font-size:12px;line-height:1.55}.number{font-size:20px;font-weight:1000;margin-top:4px}
-.confirm{width:100%;border:0;border-radius:11px;padding:14px;margin-top:16px;background:linear-gradient(90deg,#08b7ef,#087cf5);color:#fff;font-weight:1000}.note{margin-top:10px;padding:10px;border-radius:9px;background:#f6f7f9;color:#697586;font-size:11px;line-height:1.5}
-.bottom{position:fixed;left:0;right:0;bottom:0;height:72px;background:#fff;border-top:1px solid var(--line);z-index:50;box-shadow:0 -8px 25px #00000010}.bottom-in{width:min(520px,100%);height:100%;margin:auto;display:grid;grid-template-columns:1fr 1fr 1fr}.nav{text-align:center;color:#7b8797;font-size:11px;font-weight:800;padding-top:8px}.nav b{display:block;font-size:22px;margin-bottom:3px}.nav.active{color:#111}.nav.active:after{content:"";display:block;width:34px;height:3px;border-radius:9px;background:var(--yellow);margin:4px auto}.add{width:58px;height:58px;border-radius:50%;background:#111;color:#fff;font-size:31px;display:flex;align-items:center;justify-content:center;margin:-20px auto 0;border:5px solid #fff}
-.modal{position:fixed;inset:0;background:#0009;display:none;align-items:center;justify-content:center;padding:18px;z-index:100}.modal.show{display:flex}.modal-card{width:min(410px,100%);background:#fff;border-radius:20px;padding:22px;text-align:center}.success{font-size:50px}.modal-card h2{color:#12a96a;margin:7px}.modal-card p{color:#667085;font-size:13px;line-height:1.6}.orderid{margin:14px 0;padding:12px;background:#f4f8ff;border:1px dashed #8bbcff;border-radius:10px;color:#087cf5;font-weight:900}.close{width:100%;padding:12px;border:0;border-radius:10px;background:#111;color:#fff;font-weight:900}
-@media(max-width:430px){.pic{height:125px}.banner{min-height:150px}.banner h1{font-size:28px}}
+:root{
+--yellow:#ffc400;
+--blue:#087cf5;
+--cyan:#08b7ef;
+--purple:#6500a8;
+--bg:#f5f6f8;
+--white:#fff;
+--text:#17202d;
+--line:#e2e6eb;
+}
+
+*{
+box-sizing:border-box;
+margin:0;
+padding:0;
+}
+
+html{
+scroll-behavior:smooth;
+}
+
+body{
+font-family:Arial,"Noto Sans Bengali",sans-serif;
+background:var(--bg);
+color:var(--text);
+padding-bottom:82px;
+}
+
+button,input,select{
+font:inherit;
+}
+
+button{
+cursor:pointer;
+}
+
+.container{
+width:min(720px,100%);
+margin:auto;
+padding:0 14px;
+}
+
+
+/* ================= HEADER ================= */
+
+.topbar{
+position:sticky;
+top:0;
+z-index:50;
+background:#fff;
+border-bottom:1px solid var(--line);
+}
+
+.top-inner{
+height:62px;
+display:flex;
+align-items:center;
+justify-content:space-between;
+}
+
+.logo{
+font-size:21px;
+font-weight:1000;
+}
+
+.logo span{
+color:var(--cyan);
+}
+
+.menu{
+width:40px;
+height:40px;
+border:1px solid var(--line);
+background:#fff;
+border-radius:11px;
+font-size:19px;
+}
+
+
+/* ================= BANNER ================= */
+
+.hero{
+padding:14px 0 8px;
+}
+
+.ff-banner{
+position:relative;
+height:225px;
+overflow:hidden;
+border-radius:18px;
+background:
+radial-gradient(circle at 50% 100%,#168cff 0,#30106d 38%,#090020 100%);
+box-shadow:0 9px 28px #0004;
+}
+
+.ff-banner:before{
+content:"";
+position:absolute;
+inset:0;
+background:
+linear-gradient(110deg,#08001eaa,#6200a855,#008cff33),
+repeating-linear-gradient(
+120deg,
+transparent 0,
+transparent 35px,
+#ffffff08 36px,
+transparent 37px
+);
+}
+
+.banner-text{
+position:absolute;
+z-index:5;
+left:18px;
+top:18px;
+color:white;
+text-shadow:0 3px 7px #000;
+}
+
+.banner-small{
+color:#8ff8ff;
+font-size:10px;
+font-weight:900;
+letter-spacing:1px;
+}
+
+.banner-text h1{
+font-size:26px;
+line-height:.95;
+margin:6px 0;
+font-weight:1000;
+}
+
+.banner-text h1 span{
+color:#ffd21a;
+}
+
+.banner-text p{
+font-size:11px;
+font-weight:900;
+margin-top:7px;
+}
+
+.banner-btn{
+display:inline-block;
+margin-top:10px;
+padding:8px 13px;
+border-radius:9px;
+background:#ffd000;
+color:#111;
+font-size:11px;
+font-weight:1000;
+text-decoration:none;
+box-shadow:0 4px 12px #0006;
+}
+
+
+/* ================= CHARACTER ART ================= */
+
+.character{
+position:absolute;
+z-index:2;
+bottom:-4px;
+width:100px;
+height:145px;
+filter:drop-shadow(0 7px 8px #0008);
+}
+
+.character.left{
+left:58%;
+transform:translateX(-50%);
+}
+
+.character.right{
+right:-5px;
+transform:scaleX(-1);
+}
+
+.head{
+position:absolute;
+width:43px;
+height:48px;
+border-radius:45% 45% 42% 42%;
+background:linear-gradient(145deg,#ffd0ad,#9e513e);
+left:29px;
+top:5px;
+z-index:3;
+}
+
+.hair{
+position:absolute;
+width:54px;
+height:48px;
+background:#111;
+border-radius:55% 45% 20% 30%;
+left:23px;
+top:0;
+z-index:4;
+transform:rotate(-8deg);
+}
+
+.bodychar{
+position:absolute;
+width:67px;
+height:82px;
+left:17px;
+top:52px;
+background:linear-gradient(135deg,#1b1b29,#6b00b7);
+clip-path:polygon(20% 0,80% 0,100% 100%,0 100%);
+}
+
+.arm{
+position:absolute;
+width:19px;
+height:70px;
+background:#252536;
+top:58px;
+border-radius:20px;
+}
+
+.arm.a{
+left:5px;
+transform:rotate(19deg);
+}
+
+.arm.b{
+right:4px;
+transform:rotate(-20deg);
+}
+
+.gun{
+position:absolute;
+width:74px;
+height:9px;
+background:#111;
+right:-32px;
+top:79px;
+transform:rotate(-17deg);
+border-radius:5px;
+box-shadow:0 0 0 3px #333;
+}
+
+.gun:after{
+content:"";
+position:absolute;
+right:-17px;
+top:-5px;
+width:24px;
+height:18px;
+background:#111;
+border-radius:3px;
+}
+
+
+/* ================= DIAMONDS ================= */
+
+.diamonds{
+position:absolute;
+z-index:4;
+right:19px;
+bottom:13px;
+width:115px;
+height:82px;
+}
+
+.dia{
+position:absolute;
+width:37px;
+height:48px;
+clip-path:polygon(50% 0,100% 35%,78% 100%,22% 100%,0 35%);
+background:linear-gradient(145deg,#dffcff,#16dfff 45%,#087cf5);
+filter:drop-shadow(0 5px 5px #0008);
+}
+
+.dia:after{
+content:"";
+position:absolute;
+left:9px;
+top:9px;
+width:15px;
+height:22px;
+background:#fff9;
+clip-path:polygon(50% 0,100% 100%,0 100%);
+}
+
+.d1{
+left:12px;
+bottom:0;
+transform:rotate(-7deg);
+}
+
+.d2{
+left:40px;
+bottom:12px;
+transform:rotate(5deg);
+}
+
+.d3{
+left:69px;
+bottom:1px;
+transform:rotate(8deg);
+}
+
+.d4{
+left:44px;
+bottom:43px;
+transform:scale(.65) rotate(-10deg);
+}
+
+
+/* ================= RANGE ================= */
+
+.range{
+position:absolute;
+z-index:5;
+right:13px;
+top:15px;
+background:#0008;
+border:1px solid #ffffff44;
+padding:6px 9px;
+border-radius:8px;
+color:#fff;
+font-size:12px;
+font-weight:1000;
+}
+
+.range span{
+color:#ffd21a;
+}
+
+
+/* ================= SECTION ================= */
+
+.title{
+margin:24px 6px 14px;
+background:#fff;
+border-left:5px solid var(--yellow);
+border-radius:10px;
+padding:13px 14px;
+font-size:21px;
+font-weight:1000;
+}
+
+
+/* ================= CATEGORY ================= */
+
+.cats{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:9px;
+}
+
+.cat{
+background:#fff;
+border:1px solid var(--line);
+border-radius:13px;
+padding:11px 4px;
+text-align:center;
+font-size:11px;
+font-weight:800;
+}
+
+.cat b{
+display:block;
+font-size:24px;
+margin-bottom:4px;
+}
+
+
+/* ================= PRODUCTS ================= */
+
+.products{
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:12px;
+}
+
+.product{
+background:#fff;
+border:1px solid var(--line);
+border-radius:15px;
+overflow:hidden;
+box-shadow:0 5px 16px #0f172a0d;
+}
+
+.pic{
+height:140px;
+display:flex;
+align-items:center;
+justify-content:center;
+position:relative;
+background:linear-gradient(135deg,#21004f,#7800b8 55%,#087cf5);
+}
+
+.pic:after{
+content:"";
+position:absolute;
+width:145px;
+height:145px;
+border-radius:50%;
+background:#fff2;
+right:-50px;
+top:-50px;
+}
+
+.diamond{
+font-size:64px;
+filter:drop-shadow(0 7px 6px #0006);
+}
+
+.pic .word{
+position:absolute;
+left:10px;
+top:9px;
+color:#fff;
+font-weight:1000;
+font-size:17px;
+line-height:1.05;
+z-index:2;
+text-shadow:2px 2px #450070;
+}
+
+.body{
+padding:11px;
+}
+
+.body h3{
+font-size:13px;
+min-height:35px;
+line-height:1.35;
+}
+
+.price{
+color:#078fd7;
+font-size:17px;
+font-weight:1000;
+margin:5px 0 9px;
+}
+
+.buy{
+width:100%;
+border:0;
+border-radius:9px;
+padding:10px;
+background:#111827;
+color:#fff;
+font-size:12px;
+font-weight:900;
+}
+
+
+/* ================= ORDER ================= */
+
+.order{
+background:#fff;
+border:1px solid var(--line);
+border-radius:16px;
+padding:16px;
+box-shadow:0 5px 18px #0f172a0d;
+}
+
+label{
+display:block;
+font-size:13px;
+font-weight:900;
+margin:13px 0 7px;
+}
+
+input,select{
+width:100%;
+padding:13px;
+border:1px solid #d6dbe2;
+border-radius:10px;
+background:#fafbfc;
+outline:0;
+}
+
+.selected{
+padding:13px;
+border-radius:10px;
+background:#effaff;
+border:1px solid #9de9ff;
+color:#087eaf;
+font-weight:900;
+font-size:13px;
+}
+
+.pay{
+margin-top:10px;
+padding:12px;
+border-radius:10px;
+background:#fff8df;
+border:1px solid #efd267;
+font-size:12px;
+line-height:1.55;
+}
+
+.number{
+font-size:20px;
+font-weight:1000;
+margin-top:4px;
+}
+
+.confirm{
+width:100%;
+border:0;
+border-radius:11px;
+padding:14px;
+margin-top:16px;
+background:linear-gradient(90deg,#08b7ef,#087cf5);
+color:#fff;
+font-weight:1000;
+}
+
+.note{
+margin-top:10px;
+padding:10px;
+border-radius:9px;
+background:#f6f7f9;
+color:#697586;
+font-size:11px;
+line-height:1.5;
+}
+
+
+/* ================= FOOTER ================= */
+
+.footer{
+text-align:center;
+padding:25px;
+color:#8b95a5;
+font-size:11px;
+}
+
+
+/* ================= BOTTOM NAV ================= */
+
+.bottom{
+position:fixed;
+left:0;
+right:0;
+bottom:0;
+height:72px;
+background:#fff;
+border-top:1px solid var(--line);
+z-index:50;
+box-shadow:0 -8px 25px #00000010;
+}
+
+.bottom-in{
+width:min(520px,100%);
+height:100%;
+margin:auto;
+display:grid;
+grid-template-columns:1fr 1fr 1fr;
+}
+
+.nav{
+text-align:center;
+color:#7b8797;
+font-size:11px;
+font-weight:800;
+padding-top:8px;
+text-decoration:none;
+}
+
+.nav b{
+display:block;
+font-size:22px;
+margin-bottom:3px;
+}
+
+.nav.active{
+color:#111;
+}
+
+.nav.active:after{
+content:"";
+display:block;
+width:34px;
+height:3px;
+border-radius:9px;
+background:var(--yellow);
+margin:4px auto;
+}
+
+.add{
+width:58px;
+height:58px;
+border-radius:50%;
+background:#111;
+color:#fff;
+font-size:31px;
+display:flex;
+align-items:center;
+justify-content:center;
+margin:-20px auto 0;
+border:5px solid #fff;
+}
+
+
+/* ================= MODAL ================= */
+
+.modal{
+position:fixed;
+inset:0;
+background:#0009;
+display:none;
+align-items:center;
+justify-content:center;
+padding:18px;
+z-index:100;
+}
+
+.modal.show{
+display:flex;
+}
+
+.modal-card{
+width:min(410px,100%);
+background:#fff;
+border-radius:20px;
+padding:22px;
+text-align:center;
+}
+
+.success{
+font-size:50px;
+}
+
+.modal-card h2{
+color:#12a96a;
+margin:7px;
+}
+
+.modal-card p{
+color:#667085;
+font-size:13px;
+line-height:1.6;
+}
+
+.orderid{
+margin:14px 0;
+padding:12px;
+background:#f4f8ff;
+border:1px dashed #8bbcff;
+border-radius:10px;
+color:#087cf5;
+font-weight:900;
+}
+
+.close{
+width:100%;
+padding:12px;
+border:0;
+border-radius:10px;
+background:#111;
+color:#fff;
+font-weight:900;
+}
+
+
+/* ================= MOBILE ================= */
+
+@media(max-width:430px){
+
+.ff-banner{
+height:200px;
+}
+
+.banner-text{
+left:13px;
+top:15px;
+}
+
+.banner-text h1{
+font-size:21px;
+}
+
+.banner-text p{
+font-size:9px;
+}
+
+.banner-btn{
+padding:7px 10px;
+}
+
+.character{
+transform:scale(.85);
+transform-origin:bottom;
+}
+
+.character.left{
+left:62%;
+}
+
+.character.right{
+right:-17px;
+}
+
+.diamonds{
+right:5px;
+transform:scale(.8);
+transform-origin:bottom right;
+}
+
+.range{
+font-size:10px;
+right:8px;
+top:10px;
+}
+
+.pic{
+height:125px;
+}
+
+}
+
+
+/* ================= VERY SMALL SCREEN ================= */
+
+@media(max-width:360px){
+
+.banner-text h1{
+font-size:19px;
+}
+
+.character.left{
+left:64%;
+}
+
+.character.right{
+display:none;
+}
+
+.diamonds{
+right:5px;
+}
+
+}
 </style>
 </head>
+
 <body>
-<header class="topbar"><div class="container top-inner"><div class="logo">💎 AMINUR <span>TOP-UP</span></div><button class="menu" onclick="document.getElementById('order').scrollIntoView({behavior:'smooth'})">🛒</button></div></header>
+
+
+<!-- ================= HEADER ================= -->
+
+<header class="topbar">
+
+<div class="container top-inner">
+
+<div class="logo">
+💎 AMINUR <span>TOP-UP</span>
+</div>
+
+<button
+class="menu"
+onclick="document.getElementById('order').scrollIntoView({behavior:'smooth'})">
+🛒
+</button>
+
+</div>
+
+</header>
+
 
 <main>
-<section class="hero"><div class="container"><div class="banner"><div><small>⚡ FAST • EASY • SECURE</small><h1>FREE FIRE<br>TOP-UP</h1><p>আপনার পছন্দের Diamond ও Membership সহজেই Order করুন।</p><a href="#products"><button>💎 TOP-UP করুন</button></a></div></div></div></section>
 
-<section><div class="container"><div class="title">Free Fire Top-Up</div><div class="cats">
-<div class="cat"><b>💎</b>Diamonds</div><div class="cat"><b>🎁</b>Membership</div><div class="cat"><b>🎮</b>Level Up</div><div class="cat"><b>🔥</b>Offers</div>
-</div></div></section>
 
-<section id="products"><div class="container"><div class="title">💎 Diamond & Membership</div><div class="products" id="grid"></div></div></section>
+<!-- ================= FREE FIRE BANNER ================= -->
 
-<section id="order"><div class="container"><div class="title">🛒 Order Now</div><div class="order">
-<label>👤 Player UID</label><input id="uid" inputmode="numeric" placeholder="আপনার Free Fire UID লিখুন">
-<label>💎 Selected Package</label><div class="selected" id="selected">কোনো Package নির্বাচন করা হয়নি</div>
-<label>💳 Payment Method</label><select id="payment"><option value="">Payment Method নির্বাচন করুন</option><option>bKash</option><option>Nagad</option><option>Rocket</option></select>
+<section class="hero">
+
+<div class="container">
+
+<div class="ff-banner">
+
+<div class="range">
+25 💎 <span>→</span> 5060 💎
+</div>
+
+
+<div class="banner-text">
+
+<div class="banner-small">
+⚡ FAST • SECURE • EASY
+</div>
+
+<h1>
+FREE FIRE<br>
+<span>DIAMOND TOP-UP</span>
+</h1>
+
+<p>
+25 Diamond থেকে 5060 Diamond
+</p>
+
+<a
+href="#products"
+class="banner-btn">
+💎 TOP-UP NOW
+</a>
+
+</div>
+
+
+<!-- CHARACTER 1 -->
+
+<div class="character left">
+
+<div class="hair"></div>
+<div class="head"></div>
+<div class="bodychar"></div>
+<div class="arm a"></div>
+<div class="arm b"></div>
+<div class="gun"></div>
+
+</div>
+
+
+<!-- CHARACTER 2 -->
+
+<div class="character right">
+
+<div class="hair"></div>
+<div class="head"></div>
+<div class="bodychar"></div>
+<div class="arm a"></div>
+<div class="arm b"></div>
+<div class="gun"></div>
+
+</div>
+
+
+<!-- DIAMONDS -->
+
+<div class="diamonds">
+
+<div class="dia d1"></div>
+<div class="dia d2"></div>
+<div class="dia d3"></div>
+<div class="dia d4"></div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ================= CATEGORY ================= -->
+
+<section>
+
+<div class="container">
+
+<div class="title">
+Free Fire Top-Up
+</div>
+
+<div class="cats">
+
+<div class="cat">
+<b>💎</b>
+Diamonds
+</div>
+
+<div class="cat">
+<b>🎁</b>
+Membership
+</div>
+
+<div class="cat">
+<b>🎮</b>
+Level Up
+</div>
+
+<div class="cat">
+<b>🔥</b>
+Offers
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ================= PRODUCTS ================= -->
+
+<section id="products">
+
+<div class="container">
+
+<div class="title">
+💎 Diamond & Membership
+</div>
+
+<div
+class="products"
+id="grid">
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ================= ORDER ================= -->
+
+<section id="order">
+
+<div class="container">
+
+<div class="title">
+🛒 Order Now
+</div>
+
+<div class="order">
+
+<label>
+👤 Player UID
+</label>
+
+<input
+id="uid"
+inputmode="numeric"
+placeholder="আপনার Free Fire UID লিখুন"
+>
+
+
+<label>
+💎 Selected Package
+</label>
+
+<div
+class="selected"
+id="selected">
+কোনো Package নির্বাচন করা হয়নি
+</div>
+
+
+<label>
+💳 Payment Method
+</label>
+
+<select id="payment">
+
+<option value="">
+Payment Method নির্বাচন করুন
+</option>
+
+<option value="bKash">
+bKash
+</option>
+
+<option value="Nagad">
+Nagad
+</option>
+
+<option value="Rocket">
+Rocket
+</option>
+
+</select>
+
+
 <div id="payinfo"></div>
-<label>🧾 Transaction ID</label><input id="trx" placeholder="Payment Transaction ID লিখুন">
-<button class="confirm" onclick="submitOrder()">🚀 CONFIRM ORDER</button>
-<div class="note">⚠️ Payment করার আগে Package ও Amount যাচাই করুন। সঠিক Transaction ID দিন।</div>
-</div></div></section>
+
+
+<label>
+🧾 Transaction ID
+</label>
+
+<input
+id="trx"
+placeholder="Payment Transaction ID লিখুন"
+>
+
+
+<button
+class="confirm"
+onclick="submitOrder()">
+🚀 CONFIRM ORDER
+</button>
+
+
+<div class="note">
+⚠️ Payment করার আগে Package ও Amount যাচাই করুন।
+সঠিক Transaction ID দিন।
+</div>
+
+</div>
+
+</div>
+
+</section>
+
 </main>
 
-<footer style="text-align:center;padding:25px;color:#8b95a5;font-size:11px">© 2026 <b>AMINUR TOP-UP</b> • All Rights Reserved</footer>
 
-<nav class="bottom"><div class="bottom-in">
-<a class="nav active" href="#"><b>⌂</b>Home</a>
-<a class="nav" href="#products"><div class="add">＋</div>Add Money</a>
-<a class="nav" href="#order"><b>🛍️</b>Orders</a>
-</div></nav>
+<!-- ================= FOOTER ================= -->
 
-<div class="modal" id="modal"><div class="modal-card"><div class="success">✅</div><h2>Order Received!</h2><p>আপনার Order তথ্য গ্রহণ করা হয়েছে। যাচাই শেষে Order প্রসেস করা হবে।</p><div class="orderid" id="orderid">Order ID: —</div><button class="close" onclick="document.getElementById('modal').classList.remove('show')">ঠিক আছে</button></div></div>
+<footer class="footer">
+
+© 2026
+<b>AMINUR TOP-UP</b>
+• All Rights Reserved
+
+</footer>
+
+
+<!-- ================= BOTTOM NAV ================= -->
+
+<nav class="bottom">
+
+<div class="bottom-in">
+
+<a
+class="nav active"
+href="#">
+<b>⌂</b>
+Home
+</a>
+
+<a
+class="nav"
+href="#products">
+
+<div class="add">
+＋
+</div>
+
+Add Money
+
+</a>
+
+<a
+class="nav"
+href="#order">
+
+<b>🛍️</b>
+Orders
+
+</a>
+
+</div>
+
+</nav>
+
+
+<!-- ================= SUCCESS POPUP ================= -->
+
+<div
+class="modal"
+id="modal">
+
+<div class="modal-card">
+
+<div class="success">
+✅
+</div>
+
+<h2>
+Order Received!
+</h2>
+
+<p>
+আপনার Order তথ্য গ্রহণ করা হয়েছে।
+যাচাই শেষে Order প্রসেস করা হবে।
+</p>
+
+<div
+class="orderid"
+id="orderid">
+Order ID: —
+</div>
+
+<button
+class="close"
+onclick="document.getElementById('modal').classList.remove('show')">
+ঠিক আছে
+</button>
+
+</div>
+
+</div>
+
 
 <script>
+
+/* ================= PRODUCTS ================= */
+
 const products=[
-["25 Diamonds","৳25","25 DIAMONDS"],["50 Diamonds","৳45","50 DIAMONDS"],["115 Diamonds","৳85","115 DIAMONDS"],["240 Diamonds","৳165","240 DIAMONDS"],
-["355 Diamonds","৳250","355 DIAMONDS"],["480 Diamonds","৳330","480 DIAMONDS"],["610 Diamonds","৳400","610 DIAMONDS"],["725 Diamonds","৳485","725 DIAMONDS"],
-["1240 Diamonds","৳800","1240 DIAMONDS"],["2530 Diamonds","৳1600","2530 DIAMONDS"],["5060 Diamonds","৳3200","5060 DIAMONDS"],
-["Weekly Lite","৳45","WEEKLY LITE"],["Weekly Membership","৳170","WEEKLY MEMBERSHIP"],["Monthly Membership","৳800","MONTHLY MEMBERSHIP"]
+
+["25 Diamonds","৳25","25 DIAMONDS"],
+["50 Diamonds","৳45","50 DIAMONDS"],
+["115 Diamonds","৳85","115 DIAMONDS"],
+["240 Diamonds","৳165","240 DIAMONDS"],
+
+["355 Diamonds","৳250","355 DIAMONDS"],
+["480 Diamonds","৳330","480 DIAMONDS"],
+["610 Diamonds","৳400","610 DIAMONDS"],
+["725 Diamonds","৳485","725 DIAMONDS"],
+
+["1240 Diamonds","৳800","1240 DIAMONDS"],
+["2530 Diamonds","৳1600","2530 DIAMONDS"],
+["5060 Diamonds","৳3200","5060 DIAMONDS"],
+
+["Weekly Lite","৳45","WEEKLY LITE"],
+["Weekly Membership","৳170","WEEKLY MEMBERSHIP"],
+["Monthly Membership","৳800","MONTHLY MEMBERSHIP"]
+
 ];
+
 let selected=null;
+
 const grid=document.getElementById("grid");
+
+
+/* ================= CREATE PRODUCTS ================= */
+
 products.forEach(p=>{
- const c=document.createElement("article");c.className="product";
- c.innerHTML='<div class="pic"><div class="word">FREE FIRE<br><span style="color:#ffd21a">'+p[2]+'</span></div><div class="diamond">'+(p[0].includes("Membership")||p[0].includes("Lite")?"🎁":"💎")+'</div></div><div class="body"><h3>Free Fire '+p[0]+'</h3><div class="price">'+p[1]+'</div><button class="buy">BUY NOW</button></div>';
- c.querySelector(".buy").onclick=()=>{selected={name:p[0],price:p[1]};document.getElementById("selected").textContent=p[0]+" — "+p[1];document.getElementById("order").scrollIntoView({behavior:"smooth"})};
- grid.appendChild(c);
-});
-document.getElementById("payment").onchange=function(){
- let b=document.getElementById("payinfo");
- if(this.value==="bKash")b.innerHTML='<div class="pay">📱 <b>bKash Send Money</b><br>এই নম্বরে টাকা পাঠান:<div class="number">01309267610</div>তারপর Transaction ID লিখুন।</div>';
- else if(this.value==="Nagad")b.innerHTML='<div class="pay">📱 <b>Nagad</b><br>Nagad payment number বর্তমানে সেটআপ করা হচ্ছে।</div>';
- else if(this.value==="Rocket")b.innerHTML='<div class="pay">📱 <b>Rocket</b><br>Rocket payment number বর্তমানে সেটআপ করা হচ্ছে।</div>';
- else b.innerHTML="";
+
+const c=document.createElement("article");
+
+c.className="product";
+
+const gift=
+p[0].includes("Membership") ||
+p[0].includes("Lite");
+
+c.innerHTML=`
+
+<div class="pic">
+
+<div class="word">
+FREE FIRE<br>
+<span style="color:#ffd21a">
+${p[2]}
+</span>
+</div>
+
+<div class="diamond">
+${gift?"🎁":"💎"}
+</div>
+
+</div>
+
+<div class="body">
+
+<h3>
+Free Fire ${p[0]}
+</h3>
+
+<div class="price">
+${p[1]}
+</div>
+
+<button class="buy">
+BUY NOW
+</button>
+
+</div>
+
+`;
+
+c.querySelector(".buy").onclick=()=>{
+
+selected={
+name:p[0],
+price:p[1]
 };
-function submitOrder(){
- let uid=document.getElementById("uid").value.trim(),payment=document.getElementById("payment").value,trx=document.getElementById("trx").value.trim();
- if(!uid)return alert("⚠️ Player UID দিন!");if(!selected)return alert("💎 একটি Package নির্বাচন করুন!");if(!payment)return alert("💳 Payment Method নির্বাচন করুন!");if(!trx)return alert("🧾 Transaction ID দিন!");
- let orderId="ATU-"+Date.now().toString().slice(-8);
- localStorage.setItem("lastOrder",JSON.stringify({orderId,uid,package:selected.name,price:selected.price,payment,trx,createdAt:new Date().toISOString()}));
- document.getElementById("orderid").textContent="Order ID: "+orderId;document.getElementById("modal").classList.add("show");
+
+document.getElementById("selected")
+.textContent=
+p[0]+" — "+p[1];
+
+document.getElementById("order")
+.scrollIntoView({
+behavior:"smooth"
+});
+
+};
+
+grid.appendChild(c);
+
+});
+
+
+/* ================= PAYMENT ================= */
+
+document.getElementById("payment").onchange=function(){
+
+let b=
+document.getElementById("payinfo");
+
+if(this.value==="bKash"){
+
+b.innerHTML=`
+
+<div class="pay">
+
+📱 <b>bKash Send Money</b>
+
+<br>
+
+এই নম্বরে টাকা পাঠান:
+
+<div class="number">
+01309267610
+</div>
+
+তারপর Transaction ID লিখুন।
+
+</div>
+
+`;
+
 }
+
+else if(this.value==="Nagad"){
+
+b.innerHTML=`
+
+<div class="pay">
+
+📱 <b>Nagad</b>
+
+<br>
+
+Nagad payment number বর্তমানে
+সেটআপ করা হচ্ছে।
+
+</div>
+
+`;
+
+}
+
+else if(this.value==="Rocket"){
+
+b.innerHTML=`
+
+<div class="pay">
+
+📱 <b>Rocket</b>
+
+<br>
+
+Rocket payment number বর্তমানে
+সেটআপ করা হচ্ছে।
+
+</div>
+
+`;
+
+}
+
+else{
+
+b.innerHTML="";
+
+}
+
+};
+
+
+/* ================= ORDER ================= */
+
+function submitOrder(){
+
+let uid=
+document.getElementById("uid")
+.value.trim();
+
+let payment=
+document.getElementById("payment")
+.value;
+
+let trx=
+document.getElementById("trx")
+.value.trim();
+
+
+if(!uid){
+
+alert("⚠️ Player UID দিন!");
+
+return;
+}
+
+if(!selected){
+
+alert("💎 একটি Package নির্বাচন করুন!");
+
+return;
+}
+
+if(!payment){
+
+alert("💳 Payment Method নির্বাচন করুন!");
+
+return;
+}
+
+if(!trx){
+
+alert("🧾 Transaction ID দিন!");
+
+return;
+}
+
+
+let orderId=
+"ATU-"+
+Date.now()
+.toString()
+.slice(-8);
+
+
+localStorage.setItem(
+"lastOrder",
+JSON.stringify({
+
+orderId:orderId,
+uid:uid,
+package:selected.name,
+price:selected.price,
+payment:payment,
+trx:trx,
+createdAt:new Date().toISOString()
+
+})
+);
+
+
+document.getElementById("orderid")
+.textContent=
+"Order ID: "+orderId;
+
+
+document.getElementById("modal")
+.classList.add("show");
+
+}
+
 </script>
-</body></html>
+
+</body>
+ </html>
