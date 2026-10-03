@@ -1027,7 +1027,7 @@ id="selected">
 💳 Payment Method
 </label>
 
-<select id="payment">
+<select id="payment" onchange="showPaymentInfo(this.value)">
 
 <option value="">
 Payment Method নির্বাচন করুন
@@ -1440,3 +1440,13 @@ function submitOrder(){
     .classList.add("show");
 
  }
+function showPaymentInfo(v){
+  const box = document.getElementById("payinfo");
+
+  if(v === "bKash"){
+    box.innerHTML =
+      '<div class="pay">📱 <b>bKash Send Money</b><br>এই নম্বরে টাকা পাঠান:<div class="number">01309267610</div>তারপর Transaction ID লিখুন।</div>';
+  }else{
+    box.innerHTML = "";
+  }
+  }
