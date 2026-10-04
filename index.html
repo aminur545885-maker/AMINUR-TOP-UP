@@ -1440,9 +1440,38 @@ function submitOrder(){
     "Order ID: " + orderId;
 
   document.getElementById("modal")
-    .classList.add("show");
+    .classList.add("show")
+                   }
 
- }
+function checkOrderStatus() {
+  const orderId = prompt("আপনার Order ID দিন:");
+
+  if (!orderId) return;
+
+  fetch(
+"https://script.google.com/macros/s/AKfycbylHLQ08adcsW2JAkuHJSxIRifj9Hm-1DwEKtfstgPk1vnDM7bKmKCCU89o5cxK4Ajg/exec?orderId=" + encodeURIComponent(orderId.trim())    
+)
+  )
+    .then(response => response.json())
+    .then(data => {
+      if (data.success) {
+        alert(
+          "Order ID: " + data.orderId +
+          "\nUID: " + data.uid +
+          "\nPackage: " + data.package +
+          "\nPayment: " + data.paymentMethod +
+          "\nTransaction ID: " + data.transactionId +
+          "\nStatus: " + data.status
+        );
+      } else {
+        alert("❌ " + data.message);
+      }
+    })
+    .catch(error => {
+      console.error(error);
+      alert("❌ Order Status পাওয়া যাচ্ছে না।");
+    });
+  }
 function showPaymentInfo(v){
   const box = document.getElementById("payinfo");
 
